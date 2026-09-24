@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class MultiThreading_Telusko10 {
     static void main(String[] args)throws InterruptedException {
         //Thread new Stage
-
         Thread mainThread = Thread.currentThread();
         Thread t1 = new Thread(() ->{
 //            Scanner scan = new Scanner(System.in);
