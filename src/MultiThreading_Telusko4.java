@@ -69,7 +69,6 @@ public class MultiThreading_Telusko4 {
     static void main(String[] args)throws InterruptedException {
 
         System.out.println("Application Started.........");
-
 //        System.out.println("Banking Activity Started..");
 //        Scanner scan = new Scanner(System.in);
 //
