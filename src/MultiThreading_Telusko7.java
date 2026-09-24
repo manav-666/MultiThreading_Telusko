@@ -5,7 +5,6 @@ public class MultiThreading_Telusko7 {
         System.out.println(Thread.currentThread().getId());
 
         // Using the Lambda Expression
-
         Thread t1 = new Thread(() -> {
 //            try{
 //                Thread.sleep(5000);
