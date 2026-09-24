@@ -1,4 +1,5 @@
 public class MultiThreading_Telusko9 {
+
     static void main(String[] args) {
         Thread t1 = new Thread(() ->{
             for (int i = 0; i <= 100; i++) {
