@@ -1,5 +1,4 @@
 //  Runnable Interface Implements
-
 class myRunnable implements Runnable{
     @Override
     public void run(){
