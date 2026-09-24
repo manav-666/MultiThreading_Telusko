@@ -1,7 +1,6 @@
 public class MultiThreading_Telusko1 {
     static void main(String[] args)throws InterruptedException {
         System.out.println("Application Started........");
-
         //Thread.sleep(5000);
         Thread thread = Thread.currentThread();
 
