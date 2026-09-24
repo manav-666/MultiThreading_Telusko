@@ -94,7 +94,6 @@ class Gamma1 extends Thread{
 }
 public class MultiThreading_Telusko3 {
     static void main(String[] args)throws InterruptedException {
-
 //        System.out.println("Application Started.........");
 //        System.out.println("Banking Activity Started..");
 //        Scanner scan = new Scanner(System.in);
