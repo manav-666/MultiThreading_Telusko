@@ -21,6 +21,8 @@ class Alpha2 implements Runnable{
 
         System.out.println("Banking Activity Terminated..");
     }
+
+
 }
 
 class Beta2 implements Runnable{
