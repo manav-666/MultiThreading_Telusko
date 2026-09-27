@@ -1,0 +1,29 @@
+public class MultiThreading_Telusko16 {
+    static void main(String[] args) {
+        Thread t1 = new Thread(() ->{
+            for (int i = 0; i <= 10; i++) {
+                System.out.println("T1 : " + i);
+                Thread.yield();
+            }
+        });
+
+        Thread t2 = new Thread(() -> {
+            for (int i = 0; i <= 10  ; i++) {
+                System.out.println("T2 : " + i);
+            }
+        });
+
+        t1.start();
+        t2.start();
+    }
+}
+
+/*
+   Thread.yield() --->  I am willing to give my cpu time to someone else with
+   same priority and that wants to run
+
+   OS can reject this.
+
+   Current thread does not go to WAITING, TIMED_WAITING, BLOCKED.
+   It does go to only RUNNABLE State.
+*/
