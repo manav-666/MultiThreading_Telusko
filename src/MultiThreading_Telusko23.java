@@ -10,13 +10,13 @@ public class MultiThreading_Telusko23 {
         Counter1 c1 = new Counter1();
 
         Thread t1 = new Thread(()-> {
-            for (int i = 0; i <= 10000; i++) {
+            for (int i = 1; i <= 10000; i++) {
                 c1.increment();
             }
         });
 
         Thread t2 = new Thread(()-> {
-            for (int i = 0; i <= 10000; i++) {
+            for (int i = 1; i <= 10000; i++) {
                 c1.increment();
             }
         });
@@ -24,8 +24,7 @@ public class MultiThreading_Telusko23 {
         t1.start();
         t2.start();
 
-        t1.join();
-        t2.join();
+        Thread.sleep(2000);
 
         System.out.println(c1.count);
     }
