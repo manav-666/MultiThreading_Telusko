@@ -24,7 +24,7 @@ class Test1{
 }
 public class MultiThreading_Telusko28 {
     static void main(String[] args) {
-        Test1 test = new Test1();
+        Test1 test = new Test1();  //One Object -----> One Lock
 
         Thread t1 = new Thread(() ->{
             test.m1();
