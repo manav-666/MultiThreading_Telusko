@@ -1,14 +1,15 @@
 class Counter3{
     static int count = 0;
 
-    synchronized static void increment(){
+    static void increment(){
+        synchronized (Counter3.class){
+            try{
+                Thread.sleep(2000);
+            }catch (Exception e){}
 
-        try{
-            Thread.sleep(2000);
-        }catch (Exception e){}
-
-        count++;
-        System.out.println(count);
+            count++;
+            System.out.println(count);
+        }
     }
 }
 
