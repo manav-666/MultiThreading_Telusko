@@ -2,6 +2,7 @@ class Bank{
     Object lock1 = new Object();
     Object lock2 = new Object();
 
+
     void m1(){
         synchronized (this){
             System.out.println(Thread.currentThread().getName() + " Entered m1");
@@ -15,7 +16,7 @@ class Bank{
     }
 
     void deposit(){
-        synchronized (lock1){
+        synchronized (new Object()){ //lock1
             System.out.println("Deposit Logic");
 
             try{
@@ -40,21 +41,26 @@ public class MultiThreading_Telusko29 {
     static void main(String[] args) {
         Bank b1 = new Bank();
 
-//        Thread t1 = new Thread(()->{
-//           b1.deposit();
-//        });
-//
-//        Thread t2 = new Thread(()->{
-//            b1.withdraw();
-//        });
         Thread t1 = new Thread(()->{
-            b1.m1();
+           b1.deposit();
         });
 
         Thread t2 = new Thread(()->{
+            b1.withdraw();
+        });
+
+        Thread t3 = new Thread(()->{
             b1.m1();
         });
+//        Thread t1 = new Thread(()->{
+//            b1.m1();
+//        });
+//
+//        Thread t2 = new Thread(()->{
+//            b1.m1();
+//        });
         t1.start();
+        t3.start();
         t2.start();
     }
 }
