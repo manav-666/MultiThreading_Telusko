@@ -1,6 +1,6 @@
 class Test3{
-    void m1(){
-        synchronized (this){
+    static void m1(){
+        synchronized (Test3.class){
             System.out.println("m1 Enter");
 
             try{
@@ -31,7 +31,7 @@ public class MultiThreading_Telusko31 {
         Test3 test = new Test3();  //One Object -----> One Lock
 
         Thread t1 = new Thread(() ->{
-            test.m1();
+            Test3.m1();
         });
 
         Thread t2 = new Thread(()->{
