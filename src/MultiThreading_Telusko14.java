@@ -25,21 +25,21 @@ class Library implements Runnable{
                     }
                 }
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
         }else{
             try{
                 System.out.println("Student2 got into Library");
                 Thread.sleep(2000);
-                synchronized (res1){
-                    System.out.println("Student2 has acquired " + res1);
+                synchronized (res3){
+                    System.out.println("Student2 has acquired " + res3);
                     Thread.sleep(2000);
                     synchronized (res2) {
                         System.out.println("Student2 has acquired " + res2);
                         Thread.sleep(2000);
 
-                        synchronized (res3) {
-                            System.out.println("Student2 has acquired " + res3);
+                        synchronized (res1) {
+                            System.out.println("Student2 has acquired " + res1);
                             Thread.sleep(2000);
                         }
                     }
